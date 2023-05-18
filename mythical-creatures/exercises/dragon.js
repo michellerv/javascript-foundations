@@ -20,14 +20,19 @@ function eat(dragon) {
   return dragon
 }
 
-function findFireBreathers(allDragons) {
-  //Create an array of dragons. Start with empty array.
-  //Check each dragon. If aggressive, put on list. 
-  //If not aggressive, don't put on list.
-  //Return new array of aggressive dragons.
-return allDragons
-}
+//Created a function called findFireBreathers that takes in a paramter
+//This parameter 
+function findFireBreathers(dragonArray) {
+  var newFireArray = []
+  for (var i = 0; i < dragonArray.length; i++) {
+      if (dragonArray[i].temperment.includes('aggressive')) {
+         newFireArray.push(dragonArray[i])
+      }
+    }  return newFireArray
+  }
+  
 
+ 
 module.exports = {
   createDragon, 
   greetRider, 
